@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/bp.png" type="image/png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Image Carousel</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image fade" style="display: flex">
+        <img src="Lam0.jpg" alt="Lam1" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="Lam1.jpg" alt="Lam2" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="Lam2.jpg" alt="Lam3" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="Lam3.jpg" alt="Lam4" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="Lam4.jpg" alt="Lam5" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="Lam5.jpg" alt="Lam6" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="Lam6.jpg" alt="Lam7" width="100%" />
+      </div>
+      <div class="image fade">
+        <img src="Lam7.jpg" alt="Lam8" width="100%" />
+      </div>
+
+      <a id="prev" href="#">&#8249;</a>
+      <a id="next" href="#">&#8250;</a>
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </body>
 </html>
