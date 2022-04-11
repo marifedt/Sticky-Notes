@@ -18,6 +18,8 @@ function calculateTime() {
     document.getElementById("hour").innerHTML = hour;
     document.getElementById("minute").innerHTML = minute;
     document.getElementById("ampm").innerHTML = ampm;
+    
+    setTimeout(calculateTime, 200);
 }
 
-setTimeout(calculateTime(), 200);
+

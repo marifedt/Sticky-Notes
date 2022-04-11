@@ -8,7 +8,7 @@ body{
 }
 
 .container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
     width: 95%;
     height: 100vh;
@@ -37,12 +37,12 @@ body{
 
 }
 
-#bar1, #bar2{
+#bar2{
     display: none;
 }
 
 @media(max-width:768px){
-    #bar1, #bar2{
+    #bar1,#bar2{
         display: none;
     }
 
