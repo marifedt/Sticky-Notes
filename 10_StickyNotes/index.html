@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/5e27eccc49.js" crossorigin="anonymous" defer></script>
+    <title>Sticky Notes</title>
+</head>
+<body>
+    <main>
+        <section class="inner-container">
+            <div class="notes-container">
+                <header>
+                    <div class="nav">
+                        <h2>
+                            <i class="fa-solid fa-note-sticky"></i> Sticky Notes
+                        </h2>
+                        <button id="nav-btn" onclick="openNote()">Add Note</button>
+                    </div>
+                </header>
+                <section class="allNotes"></section>
+            </div>
+        </section>
+        <div class="inputNote-container stack-top">
+            <div class="inputNote">
+                <textarea id="inputText" maxlength="200" placeholder="Note..."></textarea>
+                <i id="closeNote"class="fa-solid fa-circle-xmark" onclick="closeNote()"></i>
+            </div>
+        </div>
+        
+        
+    </main>
+</body>
+</html>
