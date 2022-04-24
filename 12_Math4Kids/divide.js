@@ -12,8 +12,6 @@ answers.forEach(item => {
     });
 });
 
-
-
 var answer = null;
 
 window.onload = () => {
@@ -24,26 +22,46 @@ function randomNumber(limit) {
     return Math.floor(Math.random()*limit);
 }
 
+function randomDecimal(limit) {
+    var precision = 10;
+    var randomnum = Math.floor(Math.random()  * (10 * precision - 1 * precision) + 1 * precision) / (1*precision);
+    return randomnum;
+}
+
 function createQuestion(){
+    let changeSize = false;
     let ques1 = randomNumber(limit);
     let ques2 = randomNumber(limit);
-    let ans = ques1 + ques2;
-
-    answer = ans;
+    let ans = ques1 / ques2;
+    if(isNaN(ans)){
+        console.log('creating another question');
+        createQuestion();
+        return;
+    }
+    
+    answer = ans.toFixed(1);
     question1.innerHTML = ques1;
     question2.innerHTML = ques2;
-    operation.innerHTML = '+';
+    operation.innerHTML = '/';
 
     var locAnswer = randomNumber(3);
 
     for (let i = 0; i < answers.length; i++) {
         let textContent = answers[i].querySelector('h1');
         if(locAnswer === i){
-           textContent.innerHTML = answer;
+            if(ans === Infinity){
+                answer = 'undefined';
+                // This is how you could get the property: font-size.
+                var style = window.getComputedStyle(answers[i], null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style); 
+                console.log(fontSize);
+                answers[i].style.fontSize = 5.2 + "vw";
+            }
+            textContent.innerHTML = answer;
         } else{
             let num = null;
            do {
-                num = randomNumber(21);
+                num = randomDecimal().toFixed(1);
                 console.log(answer);
                 console.log(num);
            } while (num == answer);

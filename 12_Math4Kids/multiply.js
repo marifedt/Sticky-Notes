@@ -12,8 +12,6 @@ answers.forEach(item => {
     });
 });
 
-
-
 var answer = null;
 
 window.onload = () => {
@@ -27,23 +25,23 @@ function randomNumber(limit) {
 function createQuestion(){
     let ques1 = randomNumber(limit);
     let ques2 = randomNumber(limit);
-    let ans = ques1 + ques2;
+    let ans = ques1 * ques2;
 
     answer = ans;
     question1.innerHTML = ques1;
     question2.innerHTML = ques2;
-    operation.innerHTML = '+';
+    operation.innerHTML = '*';
 
     var locAnswer = randomNumber(3);
 
     for (let i = 0; i < answers.length; i++) {
         let textContent = answers[i].querySelector('h1');
         if(locAnswer === i){
-           textContent.innerHTML = answer;
+            textContent.innerHTML = answer;
         } else{
             let num = null;
            do {
-                num = randomNumber(21);
+                num = randomNumber(101);
                 console.log(answer);
                 console.log(num);
            } while (num == answer);
