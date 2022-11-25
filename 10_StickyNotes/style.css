@@ -96,18 +96,24 @@ main{
     text-shadow: 1px 1px 5px black;
 }
 .nav h2:hover{
-    color:azure;
+    color: #d36f11;
 }
 
-#nav-btn{
-    border: 1px solid lightgray;
-    padding: 0 8px;
+.nav-btn-container{
+    display: flex;
+    width: 200px;
+    /* border: 1px solid black; */
+}
+.nav-btn{
+    /* border: 1px solid lightgray; */
+    margin: 0 2px;
     font-size: 1rem;
     border-radius: 3px;
     font: inherit;
+    width: 100%;
 }
 
-#nav-btn:hover{
+.nav-btn:hover{
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -182,7 +188,7 @@ main{
         font-size: 20px;
     }
 
-    #nav-btn{
+    .nav-btn{
         font-size: 15px;
         padding: 0 4px;
     }
