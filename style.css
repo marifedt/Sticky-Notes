@@ -157,7 +157,10 @@ main{
     }
 }
 
-@media(max-width:480px){
+@media(max-width: 500px){
+    .nav-btn-container{
+        width: 120px;
+    }
     .inner-container{
         width: 90%;
     }
@@ -170,7 +173,10 @@ main{
     }
 
 }
-@media(max-width:320px){
+@media(max-width:350px){
+    .nav-btn-container{
+        width: 70px;
+    }
     .inner-container{
         width: 90%;
     }
