@@ -9,8 +9,6 @@ const allItems = document.querySelector('.allNotes');
 //Array for storing notes
 const notesArr = localStorage.getItem("notes") ? JSON.parse(localStorage.getItem("notes")) : [];
 
-console.log(notesArr);
-
 //Event Listeners
 btnAdd.addEventListener('click', ()=>{openNote()});
 // btnSave.addEventListener('click', ()=>saveNote());
