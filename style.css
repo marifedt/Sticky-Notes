@@ -102,10 +102,9 @@ main{
 .nav-btn-container{
     display: flex;
     width: 200px;
-    /* border: 1px solid black; */
 }
 .nav-btn{
-    /* border: 1px solid lightgray; */
+    border: 1px solid lightgray;
     margin: 0 2px;
     font-size: 1rem;
     border-radius: 3px;
