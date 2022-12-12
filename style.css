@@ -1,206 +1,202 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
+  font-family: "Bebas Neue", cursive;
+  background-image: url(./img/bg.jpg);
+  background-color: #430b1b;
+  width: 100%;
+}
 
-    font-family: 'Bebas Neue', cursive;
-    background-image: url(./img/bg.jpg);
-    background-color: #430b1b;
+main {
+  /* border: 1px solid black; */
+
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  /* margin: 5px; */
+}
+
+.inner-container {
+  /* border: solid black; */
+  width: 75%;
+  height: 100vh;
+  position: absolute;
+}
+
+.inputNote-container {
+  /* border: 1px solid blue; */
+  /* visibility: collapse; */
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputNote {
+  border: 1px solid lightgray;
+  box-shadow: -2px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  background-color: white;
+  width: 332px;
+  height: 330px;
+  display: flex;
+  position: relative;
+}
+
+#inputText {
+  font-family: "Patua One", cursive;
+  font-size: 1.5em;
+  padding: 20px;
+  overflow-y: auto;
+  outline: none;
+  resize: none;
+  width: 95%;
+  border: none;
+}
+
+#closeNote {
+  position: absolute;
+  left: 90%;
+  font-size: 1.5em;
+  color: gray;
+}
+
+#closeNote:hover {
+  color: lightgrey;
+}
+
+.stack-top {
+  z-index: 2;
+}
+
+.nav {
+  /* border: 1px solid black; */
+
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  color: whitesmoke;
+}
+
+.nav h2 {
+  font-size: 2em;
+  text-shadow: 1px 1px 5px black;
+}
+.nav h2:hover {
+  color: #e4285d;
+}
+
+.nav-btn-container {
+  display: flex;
+  width: 200px;
+}
+.nav-btn {
+  border: 1px solid lightgray;
+  margin: 0 2px;
+  font-size: 1rem;
+  border-radius: 3px;
+  font: inherit;
+  width: 100%;
+}
+
+.nav-btn:hover {
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.allNotes {
+  /* border: 1px solid black; */
+  width: 100%;
+  margin: 5px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.note {
+  margin: 5px;
+  /* border: 1px solid lightgray; */
+  -webkit-box-shadow: -9px 14px 44px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -9px 14px 44px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -9px 14px 44px 0px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  width: 332px;
+  height: 330px;
+  overflow-wrap: break-word;
+  user-select: none;
+}
+.noteText {
+  font-family: "Patua One", cursive;
+  font-size: 1.5em;
+  white-space: pre-line;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1050px) {
+  .note {
+    width: 302px;
+    height: 300px;
+  }
+  .inner-container {
     width: 100%;
+  }
 }
 
-main{
-    /* border: 1px solid black; */
-
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    /* margin: 5px; */
+@media (max-width: 500px) {
+  .nav-btn-container {
+    width: 120px;
+  }
+  .inner-container {
+    width: 90%;
+  }
+  .inputNote {
+    width: 90%;
+  }
+  .note {
+    width: 302px;
+    height: 300px;
+  }
 }
+@media (max-width: 350px) {
+  .nav-btn-container {
+    width: 70px;
+  }
+  .inner-container {
+    width: 90%;
+  }
+  .inputNote {
+    width: 90%;
+    height: 250px;
+  }
+  .note {
+    width: 202px;
+    height: 200px;
+  }
 
-.inner-container{
-    /* border: solid black; */
-    width: 75%;
-    height: 100vh;
-    position: absolute;
-}
+  .nav h2 {
+    font-size: 20px;
+  }
 
-.inputNote-container{
-    /* border: 1px solid blue; */
-    /* visibility: collapse; */
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.inputNote{
-    border: 1px solid lightgray;
-    box-shadow: -2px 3px 5px 0 rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    background-color: white;
-    width: 332px;
-    height: 330px;
-    display: flex;
-    position: relative;
-}
-
-#inputText{
-    font-family: 'Patua One', cursive;
-    font-size: 1.5em;
-    padding: 20px;
-    overflow-y: auto;
-    outline: none;
-    resize: none;
-    width: 95%;
-    border: none;
-}
-
-#closeNote{
- position: absolute;
- left:90%;
- font-size: 1.5em;
- color: gray;
-}
-
-#closeNote:hover{
-    color: lightgrey;
-}
-
-.stack-top{
-    z-index: 2;
-}
-
-.nav{
-    /* border: 1px solid black; */
-
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
-    color: whitesmoke;
-}
-
-.nav h2{
-    font-size: 2em;
-    text-shadow: 1px 1px 5px black;
-}
-.nav h2:hover{
-    color: #e4285d;
-}
-
-.nav-btn-container{
-    display: flex;
-    width: 200px;
-}
-.nav-btn{
-    border: 1px solid lightgray;
-    margin: 0 2px;
-    font-size: 1rem;
-    border-radius: 3px;
-    font: inherit;
-    width: 100%;
-}
-
-.nav-btn:hover{
-    color: whitesmoke;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.allNotes{
-    /* border: 1px solid black; */
-    width: 100%;
-    margin: 5px;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center
-}
-
-.note{
-    margin: 5px;
-    /* border: 1px solid lightgray; */
-    -webkit-box-shadow: -9px 14px 44px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: -9px 14px 44px 0px rgba(0,0,0,0.75);
-    box-shadow: -9px 14px 44px 0px rgba(0,0,0,0.75);
-    padding: 20px;
-    width: 332px;
-    height: 330px;
-    overflow-wrap:break-word;
-    user-select: none;
-}
-.noteText{
-    font-family: 'Patua One', cursive;
-    font-size: 1.5em;
-    white-space: pre-line;
-    white-space: pre-wrap;
-
-}
-
-
-@media (min-width: 768px) and (max-width:1050px) {
-    .note{
-        width: 302px;
-        height: 300px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-
-@media(max-width: 500px){
-    .nav-btn-container{
-        width: 120px;
-    }
-    .inner-container{
-        width: 90%;
-    }
-    .inputNote{
-        width:90%;
-    }
-    .note{
-        width: 302px;
-        height: 300px;
-    }
-
-}
-@media(max-width:350px){
-    .nav-btn-container{
-        width: 70px;
-    }
-    .inner-container{
-        width: 90%;
-    }
-    .inputNote{
-        width:90%;
-        height: 250px;
-    }
-    .note{
-        width: 202px;
-        height: 200px;
-    }
-
-    .nav h2{
-        font-size: 20px;
-    }
-
-    .nav-btn{
-        font-size: 15px;
-        padding: 0 4px;
-    }
-    .noteText{
-        font-size: 1em
-    }
+  .nav-btn {
+    font-size: 15px;
+    padding: 0 4px;
+  }
+  .noteText {
+    font-size: 1em;
+  }
 }
