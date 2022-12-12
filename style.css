@@ -11,7 +11,8 @@
 body{
 
     font-family: 'Bebas Neue', cursive;
-    background-color: #d4a373;
+    background-image: url(./img/bg.jpg);
+    background-color: #430b1b;
     width: 100%;
 }
 
@@ -97,7 +98,7 @@ main{
     text-shadow: 1px 1px 5px black;
 }
 .nav h2:hover{
-    color: #d36f11;
+    color: #e4285d;
 }
 
 .nav-btn-container{

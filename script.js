@@ -90,16 +90,13 @@ function createNote(note) {
 }
 
 function deleteNote(i){
-    
     notesArr.splice(i,1);
-    console.log(notesArr);
     localStorage.setItem("notes", JSON.stringify(notesArr));
     location.reload();
 }
 
 function setRemoveListeners(){
     let allNotes = document.querySelectorAll(".note");
-    console.log(allNotes);
     allNotes.forEach((note, i) => {
         note.addEventListener("dblclick", ()=>{
             deleteNote(i);
