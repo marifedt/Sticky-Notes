@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
 
 *{
     padding: 0;
@@ -11,7 +13,6 @@ body{
     font-family: 'Bebas Neue', cursive;
     background-color: #d4a373;
     width: 100%;
-    
 }
 
 main{
@@ -57,7 +58,7 @@ main{
 }
 
 #inputText{
-    font: inherit;
+    font-family: 'Patua One', cursive;
     font-size: 1.5em;
     padding: 20px;
     overflow-y: auto;
@@ -140,6 +141,7 @@ main{
     user-select: none;
 }
 .noteText{
+    font-family: 'Patua One', cursive;
     font-size: 1.5em;
     white-space: pre-line;
     white-space: pre-wrap;
