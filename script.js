@@ -47,9 +47,9 @@ function randomNumber(limit){
 }
 
 function getRandomColor() {
-    var letters = 'BCDEF'.split('');
-    var color = '#';
-    for (var i = 0; i < 6; i++ ) {
+    let letters = 'BCDEF'.split('');
+    let color = '#';
+    for (let i = 0; i < 6; i++ ) {
         color += letters[Math.floor(Math.random() * letters.length)];
     }
     return color;
@@ -72,16 +72,16 @@ function displayNotes(){
 }
 
 function createNote(note) {
-    var randomColor = getRandomColor();
-    var noteDiv = document.createElement('div');
-    var newh4 = document.createElement('h4');
+    let randomColor = getRandomColor();
+    let noteDiv = document.createElement('div');
+    let newh4 = document.createElement('h4');
     newh4.className = 'noteText';
     newh4.innerHTML= note;
     input.value="";
     noteDiv.className = 'note';
     noteDiv.style.backgroundColor=randomColor;
-    var rnd = randomNumber(7);
-    var sign = randomNumber(2);
+    let rnd = randomNumber(7);
+    let sign = randomNumber(2);
     if(sign === 0){ noteDiv.style.transform='rotate(-'+rnd+'deg)'}
     else{noteDiv.style.transform='rotate('+rnd+'deg)'}
 
