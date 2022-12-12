@@ -39,7 +39,6 @@ input.addEventListener('keydown', (event) => {
 // Functions
 function saveNote(note){
     localStorage.setItem("notes", JSON.stringify(notesArr));
-    location.reload();
 }
 
 function randomNumber(limit){
@@ -85,27 +84,22 @@ function createNote(note) {
     if(sign === 0){ noteDiv.style.transform='rotate(-'+rnd+'deg)'}
     else{noteDiv.style.transform='rotate('+rnd+'deg)'}
 
+    noteDiv.addEventListener('dblclick', ()=>{
+        noteDiv.remove();
+        let inNotes = (e) => e === note;
+        let index = notesArr.findIndex(inNotes);
+        console.log(index);
+        deleteNote(index);
+    })
     noteDiv.append(newh4);
     allItems.append(noteDiv);
 }
 
-function deleteNote(i){
-    notesArr.splice(i,1);
+function deleteNote(index){
+    notesArr.splice(index,1);
     localStorage.setItem("notes", JSON.stringify(notesArr));
-    location.reload();
-}
-
-function setRemoveListeners(){
-    let allNotes = document.querySelectorAll(".note");
-    allNotes.forEach((note, i) => {
-        note.addEventListener("dblclick", ()=>{
-            deleteNote(i);
-            allItems.removeChild(i);
-        })
-    });
 }
 
 window.onload = function(){
     displayNotes();
-    setRemoveListeners();
 }
