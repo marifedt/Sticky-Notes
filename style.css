@@ -137,7 +137,11 @@ main {
   width: 332px;
   height: 330px;
   overflow-wrap: break-word;
-  user-select: none;
+  user-select: text;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .noteText {
   font-family: "Patua One", cursive;
