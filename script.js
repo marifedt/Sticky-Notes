@@ -87,8 +87,6 @@ function createNote(note) {
 
     noteDiv.append(newh4);
     allItems.append(noteDiv);
-
-    setRemoveListeners();
 }
 
 function deleteNote(i){
@@ -101,16 +99,16 @@ function deleteNote(i){
 
 function setRemoveListeners(){
     let allNotes = document.querySelectorAll(".note");
-    
     console.log(allNotes);
     allNotes.forEach((note, i) => {
         note.addEventListener("dblclick", ()=>{
             deleteNote(i);
-            note.remove();
+            allItems.removeChild(i);
         })
     });
 }
 
 window.onload = function(){
     displayNotes();
+    setRemoveListeners();
 }
